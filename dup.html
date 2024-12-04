@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=parseInt(prompt("enter the length"));
+        var b=[];
+        var z=[]
+        for(var i=0;i<a;i++){
+            var m=parseInt(prompt("enter the value "));
+            b.push(m);
+        }
+        for(var y=0;y<a;y++){
+            for(var j=y+1;j<a;j++){
+                if(b[y]==b[j]){
+                    document.write("hii");
+                     z[y]=b[y];
+                }
+            }
+        }
+        document.write("the value are "+b);
+        document.write("\nthe op "+ z);
+    </script>
+</body>
+</html>
