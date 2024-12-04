@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=prompt("enter the number");
+        var arr=[];
+        for(i=0;i<a;i++){
+            let z=prompt("enter the value");
+            arr.push(z);
+        }
+        var first=arr[0],sec=arr[0];
+        for(i=0;i<a;i++){
+            if(first<arr[i]){
+                sec=first;
+                first=arr[i];
+            }
+            else if(sec<arr[i]){
+                sec=arr[i]
+            }
+        }
+        alert(sec);
+    </script>
+</body>
+</html>

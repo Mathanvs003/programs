@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseInt(prompt("enter the value"));
+        var t=0
+        var temp=n;
+        while(n>0){
+            var n1=n%10;
+            n=Math.floor(n/10);
+            t=t*10+n1;
+        }
+        if(t==temp){
+            document.write("palidrome number"+t);
+        }
+        else{
+           document.write("Not palidrome number"+t);
+        }
+    </script> 
+</body>
+</html>
