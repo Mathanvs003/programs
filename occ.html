@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseInt(prompt("enter the length"));
+        var arr=[];
+        var count=0;
+        for(var i=0;i<n;i++){
+            var temp=parseInt(prompt("enter the value"));
+            arr.push(temp);
+        }     
+        for(var i=0;i<n;i++){
+            count=0;
+            for(var j=0;j<n;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+             }
+             if(i==0||arr[i]!=arr[i-1])
+                document.write(arr[i]+" in "+count+" times.<br>")
+        }
+    </script>
+</body>
+</html>

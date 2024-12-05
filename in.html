@@ -9,9 +9,11 @@
     <script>
         var a=prompt("enter the string");
         var b=prompt("enter the character");
-        var z='';
+        var z=[];
         for(var i=0;i<a.length;i++){
-            z+=split(a);
+            if(a[i]==b){
+                z.push(i);
+            }
         }
         document.write(z)
     </script>
