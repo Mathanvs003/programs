@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right,#4c00b0,#b100cd); 
+        }
+        #result{
+            color: white;
+            margin-top: 70px;
+            margin-left: 550px;
+            font-size: 40px;
+        }
+        .us{
+            color: white;
+            margin-top: 100px;
+            margin-left: 200px;
+            font-size: 40px;
+        }
+        #uscore{
+            color: white;
+            font-size: 40px;
+            margin-left: 280px;
+        }
+        .cs{
+            color: white;
+            margin-top: -150px;
+            margin-left: 800px;
+            font-size: 40px;
+        }
+        #cscore{
+            color: white;
+            font-size: 40px;
+            margin-left: 930px;
+        }
+        #rock{
+            margin-top: 50px;
+            margin-left: 420px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 90px;
+        }
+        #paper{
+            margin-left: 40px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 90px;
+        }
+        #scissor{
+            margin-left: 40px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hello">
+        <h1 id="result">Result</h1>
+        <h1 class="us">Your Score</h1>
+        <h2 id="uscore">0</h2>
+        <h1 class="cs">Computer Score</h1>
+        <h2 id="cscore">0</h2>
+        <input type="button" id="rock" value="rock" onclick="user1(1)">
+        <input type="button" id="paper" value="paper" onclick="user1(2)">
+        <input type="button" id="scissor" value="scissor" onclick="user1(3)">
+    </div>
+    <script>
+        var uscore=0;
+        var cscore=0;
+        function user1(choice){
+            var x= choice;
+            var temp=Math.floor(Math.random()*3)+1;
+            
+            if(temp==1){
+               var ch1= "rock";
+            }
+            if(temp==2){
+                var ch1="paper";
+            }
+            if(temp==3){
+                var ch1= "scissor";
+            }
+           
+            if(x==1){
+                var ch2= "rock";
+            }
+            if(x==2){
+                var ch2= "paper";
+            }
+            if(x==3){
+                var ch2="scissor";
+            }
+            
+      
+            if(ch1===ch2){
+                uscore+=1;
+                document.getElementById("uscore").innerText=uscore;
+            }
+            else{
+                cscore++;
+                document.getElementById("cscore").innerHTML=cscore;
+            }
+            if(uscore==5){
+                document.getElementById("result").innerHTML="You Won";
+            }   
+            if(cscore==5){
+                document.getElementById("result").innerHTML="You Lose";
+            }
+           if(uscore>5||cscore>5){
+                window.location.reload();
+           }
+        }    
+    </script>
+</body>
+</html>

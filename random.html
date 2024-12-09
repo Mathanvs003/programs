@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var uscore=0,cscore=0;
+        function dummy(){  
+            var n=parseInt(prompt("1.Rock\n2.Paper\n3.scissor"));
+            var temp=Math.floor(Math.random()*3)+1;
+
+            function computer(temp)
+            {
+                if(temp==1){
+                    return "rock";
+                }
+                if(temp==2){
+                    return "paper";
+                }
+                if(temp==3){
+                    return "scissor";
+                }
+                return "";
+            }
+
+            function user(temp)
+            {
+                if(n==1){
+                    return "rock";
+                }
+                if(n==2){
+                    return "paper";
+                }
+                if(n==3){
+                    return "scissor";
+                }
+                return "";
+            }
+            var ch1=user(n);
+            var ch2=computer(temp);
+            if(ch1==ch2){
+                uscore++;
+                alert("your choice "+ch1+"\ncomputer choice "+ch2+"\n you won\n your score :"+uscore+"\ncomputer score :"+cscore);
+            }
+            else{
+                cscore++;
+                alert ("your choice "+ch1+"\ncomputer choice "+ch2+"\n you lose \n your score :"+uscore+"\ncomputer score"+cscore);
+            }
+        }   
+        for(var i=0;i<5;i++){
+            dummy();
+        }
+        if(uscore>cscore){
+            alert("you won the match");
+        }
+        else if(uscore<cscore){
+            alert("you lose the match");
+        }
+        else{
+            alert("Drew");
+        }
+    </script>
+</body>
+</html>
